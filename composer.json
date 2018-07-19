@@ -1,0 +1,16 @@
+{
+    "name": "takamichie/ical2md",
+    "description": "convert ical to Markdown for PicoCMS",
+    "type": "tool",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "TakamiChie",
+            "email": "chie@onpu-tamago.net"
+        }
+    ],
+    "require": {
+        "sabre/vobject": "~4.1",
+        "twig/twig": "^2.0"
+    }
+}

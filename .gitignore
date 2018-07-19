@@ -1,0 +1,5 @@
+vendor/
+setting.ini
+composer.phar
+composer.lock
+output/*.md

@@ -1,0 +1,9 @@
+---
+Tags: {{ tags|join(' ') }}
+Title: {{ title }}
+Date: {{ dtstart|date('Y/m/d') }}
+URL: {{ url }}
+Description: | 
+  {{ description|split("\n")|join("\n  ") }}
+---
+{{ description }}
