@@ -30,7 +30,7 @@ scantags=Markdownファイルを出力したいイベントタイトルに設定
 
 ハッシュタグはどういう風に設定するの？と疑問に思った方は、わたしの公開カレンダーなどを見ると分かりやすいかもです。
 
- * [高見知英のイベントカレンダー](http://bit.ly/takamichie_event)
+* [高見知英のイベントカレンダー](http://bit.ly/takamichie_event)
 
 ### Enjoy
 
