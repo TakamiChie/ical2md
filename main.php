@@ -84,3 +84,5 @@ foreach ($vcalendar->VEVENT as $event) {
     puts("OK.");
   }
 }
+
+puts("Finished.");
