@@ -12,12 +12,23 @@ $now = new DateTime();
 $ini = parse_ini_file("setting.ini");
 $keywords = explode(" ", $ini["scantags"]);
 puts("> loading ics");
-$ctx = stream_context_create([
-  'ssl' => [
-      'crypto_method' => STREAM_CRYPTO_METHOD_TLS_CLIENT,
-  ],
-]);
-$file = file_get_contents($ini["ics_url"], false, $ctx);
+$option = [
+  CURLOPT_URL => $ini["ics_url"],
+  CURLOPT_HEADER => false,
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_TIMEOUT => 3,
+  CURLOPT_SSL_VERIFYPEER => false,
+];
+
+$ch = curl_init();
+curl_setopt_array($ch, $option);
+$file = curl_exec($ch);
+if(!$file){
+  puts("URL Access Error: " . curl_errno($ch));
+  exit;
+}
+curl_close($ch);
+
 $vcalendar = VObject\Reader::read($file);
 puts("complete");
 
